@@ -160,19 +160,6 @@ $humidityColor = getHumidityColor($humidity);
             margin-right: 5px;
         }
 
-        .poste {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .poste img {
-            width: 100px;
-            height: auto;
-        }
-
         .chart-container {
             width: 500px;
             height: 300px;
@@ -200,7 +187,7 @@ $humidityColor = getHumidityColor($humidity);
             <canvas id="chart"></canvas>
         </div>
         <div class="container">
-            <h1>Servers Temperature &amp; Humidity Tracking</h1>
+            <h1> Temperature &amp; Humidity Tracking</h1>
             <div class="data temperature">
                 <img src='temperature.png' height="85px" width="85px" /> <?php echo $temperature; ?>
             </div>
@@ -220,9 +207,6 @@ $humidityColor = getHumidityColor($humidity);
                 <img src='humidity.png' height="20px" width="20px" /><strong>Average Humidity:</strong> <?php echo $avgHumidity; ?>%
             </div>
         </div>
-    </div>
-    <div class="poste">
-        <img src='poste.jpg' />
     </div>
     <script>
         var timestamps = <?php echo json_encode($chartData['timestamps']); ?>;
